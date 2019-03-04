@@ -1,0 +1,30 @@
+.QuotePic {
+  display: grid;
+  grid-template-columns: 300px auto;
+  min-height: 200px;
+  font-size: 1rem;
+}
+
+.QuotePic.right {
+  grid-template-columns: auto 300px;
+  grid-auto-flow: dense;
+}
+
+.QuotePic-pic {
+  grid-column: 1;
+  margin: 0 auto;
+}
+.QuotePic-quote {
+  grid-column: 2;
+}
+
+.QuotePic.right> .QuotePic-pic {
+  grid-column: 2;
+}
+.QuotePic.right> .QuotePic-quote {
+  grid-column: 1;
+}
+
+.QuotePic-source {
+  font-size: .8rem;
+}

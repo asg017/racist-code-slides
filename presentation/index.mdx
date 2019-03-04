@@ -1,0 +1,78 @@
+import {Cite, Appear} from 'spectacle';
+import Number from './components/Number.jsx';
+import Title from './components/Title.jsx';
+import {aoc, saavedra, food} from './assets.js'
+import QuotePic from './components/QuotePic.jsx';
+import {darkComponents} from './slides.js';
+
+# **5** ways to write **racist code**
+
+<div style={{textAlign:'right'}}>
+  Alex Garcia
+</div>
+
+<https://iamprettydamn.cool/racist-code>
+
+
+
+
+---
+<Title number={1}>Use racist data</Title>
+
+---
+
+<Title number={2}>Forget about groups when planning</Title>
+
+- asdf
+- asdkfjasdkfj
+
+---
+
+<Title number={3}>Use magic black boxes</Title>
+
+
+```r
+library(tweetbotornot)
+users <- c("realdonaldtrump", "netflix_bot")
+
+\
+
+data <- tweetbotornot(users)
+
+```
+
+---
+
+<Title number={4}>Trust the public</Title>
+
+sd
+
+---
+
+<Title number={5}>Think code has no bias</Title>
+
+<QuotePic quote="“Algorithms are still made by human beings, and those algorithms are still pegged to basic human assumptions. They’re just automated assumptions.”"
+pic={aoc}
+align="left"
+source={{link:"https://slate.com/news-and-politics/2019/02/aoc-algorithms-racist-bias.html", text:'Slate'}}
+quoter="Alexandria Ocasio-Cortez"/>
+
+-
+
+<QuotePic quote="“Socialist Rep. Alexandria Ocasio-Cortez (D-NY) claims that algorithms, which are driven by math, are racist“"
+pic={saavedra}
+align="right"
+source={{link:"https://twitter.com/RealSaavedra/status/1087627739861897216", text:'Twitter @RealSaavedra'}}
+quoter="Ryan Saavedra of Daily Wire"
+appear={1}/>
+
+---
+
+<Title number={5}>Think code has no bias</Title>
+
+<QuotePic quote="“Using machine learning, a subtype of artificial intelligence, the billions of data points were analyzed to see what drove the glucose response to specific foods for each individual. In that way, an algorithm was built without the biases of the scientists.”"
+pic={food}
+align="left"
+source={{link:"https://www.nytimes.com/2019/03/02/opinion/sunday/diet-artificial-intelligence-diabetes.html?", text:'NY Times Opinion piece'}}
+quoter="Eric Topol"
+appear={0}/>

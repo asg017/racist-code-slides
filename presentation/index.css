@@ -1,0 +1,12 @@
+.react-live-dark pre.prism-code {
+  background: black !important;
+}
+
+h1 {
+  text-align: right;
+}
+
+.special {
+  color: #f5ab35;
+
+}

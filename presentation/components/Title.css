@@ -1,0 +1,14 @@
+.Title {
+  color: orange;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 3rem;
+}
+
+.Title-text {
+  color: white;
+  margin-left: 2rem;
+}
