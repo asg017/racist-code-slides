@@ -1,21 +1,19 @@
 import {Cite, Appear} from 'spectacle';
 import Number from './components/Number.jsx';
 import Title from './components/Title.jsx';
-import {aoc, saavedra, food} from './assets.js'
+import Name from './components/Name.jsx';
+import {aoc, saavedra, food, gerry} from './assets.js'
 import QuotePic from './components/QuotePic.jsx';
 import Site from './components/Site.jsx'
 import {darkComponents} from './slides.js';
 
 # **5** ways to write **racist code**
-
-<div style={{textAlign:'right'}}>
-  Alex Garcia
-</div>
+<Name>Alex Garcia</Name>
 
 <Site/>
 
 ---
-<Title number={1}>Use racist <Appear order={1} startValue={{display:'none'}}><span style={{color:'#f5ab35'}}>(or not diverse)</span></Appear> data</Title>
+<Title number={5}>Use racist <Appear order={1} startValue={{display:'none'}}><span style={{color:'#f5ab35'}}>(or not diverse)</span></Appear> data</Title>
 
 ```python
 text_to_sentiment("Let's go get Italian food")
@@ -39,17 +37,22 @@ text_to_sentiment("Let's go get Mexican food")
 
 Source: [Robyn Speer](https://blog.conceptnet.io/posts/2017/how-to-make-a-racist-ai-without-really-trying/)
 
+<Site/>
+
 ---
 
-<Title number={2}>Don't consider all users</Title>
+<Title number={4}>Don't consider all users</Title>
 
 - asdf
 - asdkfjasdkfj
+
+<Site/>
 
 ---
 
 <Title number={3}>Use magic black boxes</Title>
 
+`pip install`, `npm install`, `packages.install("")`
 
 ```r
 library(tweetbotornot)
@@ -60,15 +63,20 @@ users <- c("realdonaldtrump", "netflix_bot")
 data <- tweetbotornot(users)
 
 ```
+
+<Site/>
+
 ---
 
-<Title number={4}>Trust the public</Title>
+<Title number={2}>Trust the public</Title>
 
 sd
 
+<Site/>
+
 ---
 
-<Title number={5}>Think code has no bias</Title>
+<Title number={1}>Think code has no bias</Title>
 
 <QuotePic quote={
   <span>
@@ -91,9 +99,11 @@ source={{link:"https://twitter.com/RealSaavedra/status/1087627739861897216", tex
 quoter="Ryan Saavedra of Daily Wire"
 appear={1}/>
 
+<Site/>
+
 ---
 
-<Title number={5}>Think code has no bias</Title>
+<Title number={1}>Think code has no bias</Title>
 
 <QuotePic quote={<span>
 “Using machine learning, a subtype of artificial intelligence, the billions of data points were analyzed to see what drove the glucose response to specific foods for each individual.
@@ -105,8 +115,11 @@ source={{link:"https://www.nytimes.com/2019/03/02/opinion/sunday/diet-artificial
 quoter="Eric Topol"
 appear={0}/>
 
+<Site/>
+
 ---
-<Title number={5}>Think code has no bias</Title>
+
+<Title number={1}>Think code has no bias</Title>
 
 <QuotePic quote={<span>
 “The big advantage this has is that it could completely take away gerrymandering.
@@ -115,13 +128,24 @@ And if you only care about population distribution, then
 {' '}<b style={{fontSize:'1.5rem'}}>there's no way to program bias into it.</b>
 ”
 </span>}
-pic={food}
-align="left"
+pic={gerry}
+align="right"
 source={{
   link:"https://www.reddit.com/r/politics/comments/5s0mcz/politics_are_a_mess_lets_hand_it_over_to_software/ddbkd71",
-  text:'/r/politics post (+193)'
+  text:'/r/politics (+193)'
 }}
 quoter="/u/FunkyTown313"
 appear={0}/>
 
 notes: outated data, 2020 census data that included immigration question, assumptions on distribution that work in downtown LA but not in coachella
+
+<Site/>
+
+---
+
+# Final thoughts
+- Don't assume your data is free of bias
+- Audit your 3rd party packages or models
+- Remember biased algorithms *are* possible
+
+<Site/>

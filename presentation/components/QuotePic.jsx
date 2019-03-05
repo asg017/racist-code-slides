@@ -21,12 +21,14 @@ export default class QuotePic extends React.Component {
         {quote}
       </TextX>
       </BlockQuoteX>
-      <div className="QuotePic-quoter">
-        {quoter}
-      </div>
-      <div className="QuotePic-source">
-        source: <LinkX href={source.link}>{source.text}</LinkX>
-      </div>
+      <div className="QuotePic-sauce">
+        <div className="QuotePic-quoter">
+          {quoter}
+        </div>
+        <div className="QuotePic-source">
+          source: <LinkX href={source.link}>{source.text}</LinkX>
+        </div>
+        </div>
     </div>
   </div>)
   if(appear)
