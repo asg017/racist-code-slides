@@ -1,59 +1,10 @@
-# Spectacle Boilerplate
+# 5 ways to write racist code - Slides
 
-## Contents
+This repository contains a [spectacle presentation](https://github.com/FormidableLabs/spectacle)
+that is the slide tech for the "5 ways to write racist code" talk that I'm going
+to give at [#NICAR19](https://www.ire.org/conferences/nicar-2019/).
 
-- [Reference](#reference)
-- [Getting Started](#getting-started)
-- [Build & Deployment](#build-deployment)
-
-## Reference
-
-The Spectacle core API is available at [https://github.com/FormidableLabs/spectacle/blob/master/README.md](https://github.com/FormidableLabs/spectacle/blob/master/README.md).
-
-For more information about MDX syntax and how it all works, check out the [MDX documentation](https://mdxjs.com/).
-
-### Slides
-
-Slides are separated with `---`.
-
-To customize specific MDX functionality in Spectacle Boilerplate MDX, including what characters are used to demarcate slide breaks, refer to the `loader.js` file. We don't recommend altering this functionality unless necessary.
-
-## Getting Started
-
-After downloading the boilerplate, your first order of business is to open a terminal and run 
-```bash
-yarn
-```
-or 
-```bash
-npm install
-```
-
-Next, run 
-```bash
-rm -R .git
-```
-to remove the existing version control.
-
-Then, to start up the local server, run
-```bash
-yarn start
-```
-or
-```bash
-npm start
-```
-
-Open a browser and hit [http://localhost:3000](http://localhost:3000), and you're ready to roll. Modify `index.mdx` to see changes, but the best part about MDX is that you can create your own React components and import them into the `index.mdx` file to seamlessly integrate with markdown!
-
-## Build & Deployment
-
-Building the dist version of the project is as easy as running
-```bash
-npm run build
-```
-
-If you want to deploy the slideshow to surge, run 
-```bash
-npm run deploy
-```
+I choose spectacle over google slides because I wanted to do special javascript stuff
+that didn't make sense in google slides, and I choose the MDX boilerplate because
+I thought it would be cool. On further reflection, literally everything I did here
+was so very extra and unnecessary but ¯\_(ツ)_/¯
