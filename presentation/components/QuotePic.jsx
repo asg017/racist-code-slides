@@ -16,8 +16,8 @@ export default class QuotePic extends React.Component {
       <Image src={pic} width={200} height={200}/>
     </div>
     <div className="QuotePic-quote">
-      <BlockQuoteX textAlign={align}>
-      <TextX textSize='1.75rem'>
+      <BlockQuoteX textAlign={align} bold={false}>
+      <TextX textSize='1.25rem' bold={false}>
         {quote}
       </TextX>
       </BlockQuoteX>

@@ -3,6 +3,7 @@ import Number from './components/Number.jsx';
 import Title from './components/Title.jsx';
 import {aoc, saavedra, food} from './assets.js'
 import QuotePic from './components/QuotePic.jsx';
+import Site from './components/Site.jsx'
 import {darkComponents} from './slides.js';
 
 # **5** ways to write **racist code**
@@ -11,17 +12,36 @@ import {darkComponents} from './slides.js';
   Alex Garcia
 </div>
 
-<https://iamprettydamn.cool/racist-code>
-
-
-
+<Site/>
 
 ---
-<Title number={1}>Use racist data</Title>
+<Title number={1}>Use racist <Appear order={1} startValue={{display:'none'}}><span style={{color:'#f5ab35'}}>(or not diverse)</span></Appear> data</Title>
+
+```python
+text_to_sentiment("Let's go get Italian food")
+2.0429166109408983
+text_to_sentiment("Let's go get Chinese food")
+1.4094033658140972
+text_to_sentiment("Let's go get Mexican food")
+0.38801985560121732
+```
+
+|name|sentiment|group
+|-|-|-
+|mohammed|0.834974|Arab/Muslim
+|terryl|-2.858010|Black
+|alya|3.916803|Arab/Muslim
+|josé|0.432956|Hispanic
+|luciana|1.086073|Hispanic
+|hank|0.391858|White
+|megan|2.158679|White
+```
+
+Source: [Robyn Speer](https://blog.conceptnet.io/posts/2017/how-to-make-a-racist-ai-without-really-trying/)
 
 ---
 
-<Title number={2}>Forget about groups when planning</Title>
+<Title number={2}>Don't consider all users</Title>
 
 - asdf
 - asdkfjasdkfj
@@ -40,7 +60,6 @@ users <- c("realdonaldtrump", "netflix_bot")
 data <- tweetbotornot(users)
 
 ```
-
 ---
 
 <Title number={4}>Trust the public</Title>
@@ -51,7 +70,11 @@ sd
 
 <Title number={5}>Think code has no bias</Title>
 
-<QuotePic quote="“Algorithms are still made by human beings, and those algorithms are still pegged to basic human assumptions. They’re just automated assumptions.”"
+<QuotePic quote={
+  <span>
+    “Algorithms are still made by human beings, and those algorithms are still pegged to basic human assumptions.
+    {' '}<b style={{fontSize:'1.5rem'}}>They’re just automated assumptions</b>.”
+  </span>}
 pic={aoc}
 align="left"
 source={{link:"https://slate.com/news-and-politics/2019/02/aoc-algorithms-racist-bias.html", text:'Slate'}}
@@ -59,7 +82,9 @@ quoter="Alexandria Ocasio-Cortez"/>
 
 -
 
-<QuotePic quote="“Socialist Rep. Alexandria Ocasio-Cortez (D-NY) claims that algorithms, which are driven by math, are racist“"
+<QuotePic quote={<span>“Socialist Rep. Alexandria Ocasio-Cortez (D-NY) claims that algorithms,
+{' '}<b style={{fontSize:'1.5rem'}}>which are driven by math,</b>{' '}
+are racist“</span>}
 pic={saavedra}
 align="right"
 source={{link:"https://twitter.com/RealSaavedra/status/1087627739861897216", text:'Twitter @RealSaavedra'}}
@@ -70,9 +95,33 @@ appear={1}/>
 
 <Title number={5}>Think code has no bias</Title>
 
-<QuotePic quote="“Using machine learning, a subtype of artificial intelligence, the billions of data points were analyzed to see what drove the glucose response to specific foods for each individual. In that way, an algorithm was built without the biases of the scientists.”"
+<QuotePic quote={<span>
+“Using machine learning, a subtype of artificial intelligence, the billions of data points were analyzed to see what drove the glucose response to specific foods for each individual.
+{' '}<b style={{fontSize:'1.5rem'}}>In that way, an algorithm was built without the biases of the scientists.</b>”
+</span>}
 pic={food}
 align="left"
 source={{link:"https://www.nytimes.com/2019/03/02/opinion/sunday/diet-artificial-intelligence-diabetes.html?", text:'NY Times Opinion piece'}}
 quoter="Eric Topol"
 appear={0}/>
+
+---
+<Title number={5}>Think code has no bias</Title>
+
+<QuotePic quote={<span>
+“The big advantage this has is that it could completely take away gerrymandering.
+{' '}<b style={{fontSize:'1.5rem'}}>The computer has no bias. </b>
+And if you only care about population distribution, then
+{' '}<b style={{fontSize:'1.5rem'}}>there's no way to program bias into it.</b>
+”
+</span>}
+pic={food}
+align="left"
+source={{
+  link:"https://www.reddit.com/r/politics/comments/5s0mcz/politics_are_a_mess_lets_hand_it_over_to_software/ddbkd71",
+  text:'/r/politics post (+193)'
+}}
+quoter="/u/FunkyTown313"
+appear={0}/>
+
+notes: outated data, 2020 census data that included immigration question, assumptions on distribution that work in downtown LA but not in coachella

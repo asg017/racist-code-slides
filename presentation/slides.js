@@ -16,7 +16,7 @@ export const darkComponents = {
     console.log(children, rest)
     return <Text textColor="white" {...rest}>{children}</Text>
   },
-  a:  ({children}) => <Link textColor={theme.screen.colors.blue}>{children}</Link>,
+  a:  ({children, ...rest}) => <Link textColor={theme.screen.colors.blue} {...rest}>{children}</Link>,
 }
 
 
