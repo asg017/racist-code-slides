@@ -2,21 +2,27 @@
 
 var path = require("path");
 var webpack = require("webpack");
+var HtmlWebpackPlugin   =  require('html-webpack-plugin')
 
 module.exports = {
   mode: "production",
   entry: ["babel-polyfill", "./index"],
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "bundle.js",
-    publicPath: "/dist/"
+    filename: "bundle.[contenthash].js",
+    //publicPath: "/dist/"
   },
   plugins: [
     new webpack.DefinePlugin({
       "process.env": {
         NODE_ENV: JSON.stringify("production")
       }
-    })
+    }),
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      //filename: '../index.html'
+      hash: true,
+    }),
   ],
   optimization: {
     minimize: true
@@ -45,7 +51,7 @@ module.exports = {
         loader: "style-loader!css-loader"
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|ico)$/,
         loader: "url-loader?limit=8192"
       },
       {
