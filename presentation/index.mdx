@@ -3,10 +3,15 @@ import Number from './components/Number.jsx';
 import Title from './components/Title.jsx';
 import Name from './components/Name.jsx';
 import AmazonFace from './components/AmazonFace.jsx';
+import RacistDataExplain from './components/RacistDataExplain.jsx';
 import {aoc, saavedra, food, gerry} from './assets.js'
 import QuotePic from './components/QuotePic.jsx';
 import Site from './components/Site.jsx'
 import {darkComponents} from './slides.js';
+
+import SentimentFood from './components/SentimentFood.jsx'
+import SentimentName from './components/SentimentName.jsx'
+
 
 # **5** ways to write **racist code**
 <Name>Alex Garcia</Name>
@@ -16,13 +21,20 @@ import {darkComponents} from './slides.js';
 ---
 <Title number={5}>Use racist data</Title>
 
-- Racist data to make data driven decisions -> racist decision
+<RacistDataExplain/>
+
+<Site/>
+
+---
 
 ## Predictive Policing
 
-[Maricopa county, many others](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3333423)
+- predict when/where crime will happen, who will commit it
+- allocate officers in high-risk
 
-[microsoft Tay](https://www.theverge.com/2016/3/25/11306566/microsoft-racist-tay-ai-twitter-chatbot-apology)
+[Maricopa county](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3333423)
+
+
 
 <Site/>
 
@@ -50,6 +62,10 @@ import {darkComponents} from './slides.js';
 
 - Race is *deeply* embedded into many aspects of our life
 
+
+---
+
+
 ### Black people in UK 21 times more likely to have university applications
 investigated, figures show
 
@@ -64,47 +80,38 @@ are used when deciding whether an application needs investigating.
 
 <Title number={2}>Use magic black boxes 🧙🏼‍♂️</Title>
 
-- Package creators may not have considered racial bias
-- Is the package really appropriate for your project?
-
-
-`pip install`, `npm install`, `packages.install("")`
-
-```r
-library(tweetbotornot)
-users <- c("realdonaldtrump", "netflix_bot")
-
-\
-
-data <- tweetbotornot(users)
-
-```
-
-<Site/>
+Package creators may not have considered racial bias
 
 ---
 
-```python
-text_to_sentiment("Let's go get Italian food")
-2.0429166109408983
-text_to_sentiment("Let's go get Chinese food")
-1.4094033658140972
-text_to_sentiment("Let's go get Mexican food")
-0.38801985560121732
-```
+<Title number={2}>Use magic black boxes</Title>
 
-|name|sentiment|group
-|-|-|-
-|mohammed|0.834974|Arab/Muslim
-|terryl|-2.858010|Black
-|alya|3.916803|Arab/Muslim
-|josé|0.432956|Hispanic
-|luciana|1.086073|Hispanic
-|hank|0.391858|White
-|megan|2.158679|White
-```
+<SentimentFood/>
 
-Source: [Robyn Speer](https://blog.conceptnet.io/posts/2017/how-to-make-a-racist-ai-without-really-trying/)
+<Site/>
+
+[Robyn Speer](https://blog.conceptnet.io/posts/2017/how-to-make-a-racist-ai-without-really-trying/)
+
+---
+
+
+<Title number={2}>Use magic black boxes</Title>
+
+<SentimentName/>
+
+<Site/>
+
+[Robyn Speer](https://blog.conceptnet.io/posts/2017/how-to-make-a-racist-ai-without-really-trying/)
+
+---
+
+
+<Title number={2}>Use magic black boxes</Title>
+
+
+<Site/>
+
+[Robyn Speer](https://blog.conceptnet.io/posts/2017/how-to-make-a-racist-ai-without-really-trying/)
 
 ---
 
@@ -151,34 +158,12 @@ appear={0}/>
 
 ---
 
-<Title number={1}>Think code has no bias</Title>
-
-<QuotePic quote={<span>
-“The big advantage this has is that it could completely take away gerrymandering.
-{' '}<b style={{fontSize:'1.5rem'}}>The computer has no bias. </b>
-And if you only care about population distribution, then
-{' '}<b style={{fontSize:'1.5rem'}}>there's no way to program bias into it.</b>
-”
-</span>}
-pic={gerry}
-align="right"
-source={{
-  link:"https://www.reddit.com/r/politics/comments/5s0mcz/politics_are_a_mess_lets_hand_it_over_to_software/ddbkd71",
-  text:'/r/politics (+193)'
-}}
-quoter="/u/FunkyTown313"
-appear={0}/>
-
-notes: outated data, 2020 census data that included immigration question, assumptions on distribution that work in downtown LA but not in coachella
-
-<Site/>
-
----
-
 # Final thoughts
-- Don't assume your data is free of bias
+- Never assume your data is free of bias
 - Audit your 3rd party packages or models
 - Remember biased algorithms *are* possible
+
+HMU if you like this kind of stuff!
 
 👋🏼
 
