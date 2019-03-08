@@ -7,5 +7,5 @@ const A = darkComponents.a;
 export default ({children}) => (<div className="Name">
 {children}
 <br/>
-<A href="https://twitter.com/asg_027" style={{fontSize:'2rem'}}>@asg_027</A>
+<A href="https://twitter.com/agarcia_me" style={{fontSize:'2rem'}}>@agarcia_me</A>
   </div>)

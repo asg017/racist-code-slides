@@ -3,6 +3,7 @@
 var path = require("path");
 var webpack = require("webpack");
 var HtmlWebpackPlugin   =  require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: "production",
@@ -23,6 +24,9 @@ module.exports = {
       //filename: '../index.html'
       hash: true,
     }),
+    new CopyPlugin([
+      {from : 'assets/favicon.ico'}
+    ])
   ],
   optimization: {
     minimize: true
