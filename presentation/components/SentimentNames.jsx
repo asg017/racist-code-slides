@@ -1,26 +1,20 @@
 import React from 'react';
-import {CodePane, Appear} from 'spectacle';
+import {Image, Appear} from 'spectacle';
 //import {darkComponents} from '../slides.js'
+import {sn1,sn2,sn3,sn4} from '../assets.js'
 
-//onst Code = darkComponents.
-const names = [
-  `text_to_sentiment("My name is Emily")
-2.2286179364745311`,
-`text_to_sentiment("My name is Heather")
-1.3976291151079159`,
-`text_to_sentiment("My name is Yvette")
-0.98463802132985556`,
-`text_to_sentiment("My name is Shaniqua")
--0.47048131775890656`,
-]
+const names = [sn1,sn2,sn3,sn4]
 export default () => (
   <div>
-    {names.map((f,i)=>(<Appear order={i}>
-      <CodePane theme="external" lang="python" source={f}></CodePane>
-    </Appear>))}
-  </div>
-
-)
+    {names.map((n,i)=>(
+      <div key={i}>
+      <Appear order={i} endValue={{zIndex:30+i*10}}>
+        <div style={{position:'absolute',top:'1rem', left:'20%'}}>
+          <Image src={n} width={800}/>
+        </div>
+    </Appear>
+  </div>))}
+  </div>)
 
 
 /*```python

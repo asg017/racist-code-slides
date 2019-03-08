@@ -7,3 +7,14 @@ export const az2 = require('../assets/amazon2.png')
 export const az3 = require('../assets/amazon3.png')
 export const az4 = require('../assets/amazon4.png')
 export const names = require('../assets/names-boxplot.png')
+
+export const sn1 = require('../assets/sent-name-1.png')
+export const sn2 = require('../assets/sent-name-2.png')
+export const sn3 = require('../assets/sent-name-3.png')
+export const sn4 = require('../assets/sent-name-4.png')
+
+export const sf1 = require('../assets/sent-food-1.png')
+export const sf2 = require('../assets/sent-food-2.png')
+export const sf3 = require('../assets/sent-food-3.png')
+
+export const ind = require('../assets/indp-headline.png')

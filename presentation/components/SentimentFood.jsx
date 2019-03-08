@@ -1,32 +1,17 @@
 import React from 'react';
-import {CodePane, Appear} from 'spectacle';
+import {Image, Appear} from 'spectacle';
 //import {darkComponents} from '../slides.js'
+import {sf1,sf2,sf3} from '../assets.js'
 
-//onst Code = darkComponents.
-const foods = [
-  `text_to_sentiment("Let's go get Italian food")
-  2.0429166109408983`,
-  `text_to_sentiment("Let's go get Chinese food")
-  1.4094033658140972`,
-  `text_to_sentiment("Let's go get Mexican food")
-  0.38801985560121732`,
-]
+const foods = [sf1,sf2,sf3]
 export default () => (
   <div>
-    {foods.map((f,i)=>(<Appear order={i}>
-      <CodePane theme="external" lang="python" source={f}></CodePane>
-    </Appear>))}
-  </div>
-
-)
-
-
-/*```python
-text_to_sentiment("Let's go get Italian food")
-2.0429166109408983
-text_to_sentiment("Let's go get Chinese food")
-1.4094033658140972
-text_to_sentiment("Let's go get Mexican food")
-0.38801985560121732
-```
-*/
+    {foods.map((f,i)=>(
+      <div key={i}>
+      <Appear order={i} endValue={{zIndex:30+i*10}}>
+        <div style={{position:'absolute',top:'1rem', left:'20%'}}>
+          <Image src={f} width={800}/>
+        </div>
+    </Appear>
+  </div>))}
+  </div>)

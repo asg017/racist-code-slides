@@ -10,11 +10,13 @@ export default class AmazonFace extends React.Component{
       <div>
       <div>
         {azs.map((az,i)=>(
+          <div key={i}>
           <Appear order={i} endValue={{zIndex:30+i*10}}>
             <div className="AmazonFace-imgcont">
-              <Image src={az} width={800}/>
+              <Image src={az} width={750}/>
             </div>
-        </Appear>))}
+        </Appear>
+      </div>))}
       </div>
       </div>
 

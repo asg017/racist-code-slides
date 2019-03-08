@@ -1,16 +1,16 @@
-import {Cite, Appear} from 'spectacle';
+import {Cite, Appear, Image} from 'spectacle';
 import Number from './components/Number.jsx';
 import Title from './components/Title.jsx';
 import Name from './components/Name.jsx';
 import AmazonFace from './components/AmazonFace.jsx';
 import RacistDataExplain from './components/RacistDataExplain.jsx';
-import {aoc, saavedra, food, gerry} from './assets.js'
+import {aoc, saavedra, food, gerry, ind} from './assets.js'
 import QuotePic from './components/QuotePic.jsx';
 import Site from './components/Site.jsx'
-import {darkComponents} from './slides.js';
+import {darkComponents, CodeSlide} from './slides.js';
 
 import SentimentFood from './components/SentimentFood.jsx'
-import SentimentName from './components/SentimentName.jsx'
+import SentimentName from './components/SentimentNames.jsx'
 
 
 # **5** ways to write **racist code**
@@ -30,27 +30,15 @@ import SentimentName from './components/SentimentName.jsx'
 ## Predictive Policing
 
 - predict when/where crime will happen, who will commit it
-- allocate officers in high-risk
+- allocate officers in "high-risk" areas
 
-[Maricopa county](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3333423)
-
-
+<Image src="https://s3.amazonaws.com/ballotpedia-api/storage/uploads/thumbs/200/300/crop/best/JoeArpaio.jpg"/>
 
 <Site/>
 
 ---
 
 <Title number={4}>Don't use diverse data</Title>
-
-- data driver decisions
-
-[Amazon Reckognition](https://medium.com/@Joy.Buolamwini/response-racial-and-gender-bias-in-amazon-rekognition-commercial-ai-system-for-analyzing-faces-a289222eeced)
-
-<Site/>
-
----
-
-<Title number={4}></Title>
 
 <AmazonFace/>
 
@@ -60,19 +48,20 @@ import SentimentName from './components/SentimentName.jsx'
 
 <Title number={3}>Accidentally</Title>
 
-- Race is *deeply* embedded into many aspects of our life
+Race is *deeply* embedded into many aspects of our life
 
+- ZIP Codes
+- Family wealth
+- Incarceration rates
 
 ---
 
 
-### Black people in UK 21 times more likely to have university applications
-investigated, figures show
+<Image src={ind} width={600}/>
 
-> Fraud and similarity detection software, as well as input from universities,
-are used when deciding whether an application needs investigating.
+> "Fraud and similarity detection software, as well as input from universities,
+are used when deciding whether an application needs investigating.""
 
-[Source](https://www.independent.co.uk/news/education/education-news/uk-black-students-university-applications-investigation-more-likely-ucas-figures-nus-labour-a8314496.html)
 
 <Site/>
 
@@ -80,38 +69,15 @@ are used when deciding whether an application needs investigating.
 
 <Title number={2}>Use magic black boxes 🧙🏼‍♂️</Title>
 
-Package creators may not have considered racial bias
+- Package creators may not have considered racial bias
+
+<Site/>
 
 ---
-
-<Title number={2}>Use magic black boxes</Title>
 
 <SentimentFood/>
 
 <Site/>
-
-[Robyn Speer](https://blog.conceptnet.io/posts/2017/how-to-make-a-racist-ai-without-really-trying/)
-
----
-
-
-<Title number={2}>Use magic black boxes</Title>
-
-<SentimentName/>
-
-<Site/>
-
-[Robyn Speer](https://blog.conceptnet.io/posts/2017/how-to-make-a-racist-ai-without-really-trying/)
-
----
-
-
-<Title number={2}>Use magic black boxes</Title>
-
-
-<Site/>
-
-[Robyn Speer](https://blog.conceptnet.io/posts/2017/how-to-make-a-racist-ai-without-really-trying/)
 
 ---
 
@@ -127,7 +93,6 @@ align="left"
 source={{link:"https://slate.com/news-and-politics/2019/02/aoc-algorithms-racist-bias.html", text:'Slate'}}
 quoter="Alexandria Ocasio-Cortez"/>
 
--
 
 <QuotePic quote={<span>“Socialist Rep. Alexandria Ocasio-Cortez (D-NY) claims that algorithms,
 {' '}<b style={{fontSize:'1.5rem'}}>which are driven by math,</b>{' '}
@@ -142,28 +107,12 @@ appear={1}/>
 
 ---
 
-<Title number={1}>Think code has no bias</Title>
-
-<QuotePic quote={<span>
-“Using machine learning, a subtype of artificial intelligence, the billions of data points were analyzed to see what drove the glucose response to specific foods for each individual.
-{' '}<b style={{fontSize:'1.5rem'}}>In that way, an algorithm was built without the biases of the scientists.</b>”
-</span>}
-pic={food}
-align="left"
-source={{link:"https://www.nytimes.com/2019/03/02/opinion/sunday/diet-artificial-intelligence-diabetes.html?", text:'NY Times Opinion piece'}}
-quoter="Eric Topol"
-appear={0}/>
-
-<Site/>
-
----
-
 # Final thoughts
 - Never assume your data is free of bias
 - Audit your 3rd party packages or models
 - Remember biased algorithms *are* possible
 
-HMU if you like this kind of stuff!
+HMU if you like this kind of stuff! [@alexgarcia_me](https://twitter.com/alexgarcia_me)
 
 👋🏼
 

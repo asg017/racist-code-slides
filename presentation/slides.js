@@ -13,7 +13,6 @@ export const darkComponents = {
   h5: ({ children }) => <Heading size={5} textColor={theme.screen.colors.quaternary}>{children}</Heading>,
   h6: ({ children }) => <Heading size={6} textColor={theme.screen.colors.quaternary}>{children}</Heading>,
   p: ({ children, ...rest}) => {
-    console.log(children, rest)
     return <Text textColor="white" {...rest}>{children}</Text>
   },
   a:  ({children, ...rest}) => <Link textColor={theme.screen.colors.blue} {...rest}>{children}</Link>,

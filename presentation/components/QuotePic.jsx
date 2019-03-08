@@ -10,7 +10,7 @@ const LinkX = darkComponents.a;
 
 export default class QuotePic extends React.Component {
   render() {
-    const {pic, quote, align,appear, quoter, source} = this.props
+    const {pic, quote, align,appear, quoter, source, ...rest} = this.props
     const qp = (<div className={"QuotePic " + align} style={{textAlign:align}}>
     <div className="QuotePic-pic">
       <Image src={pic} width={200} height={200}/>
